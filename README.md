@@ -3,12 +3,9 @@
 **Track Activity of Users on GitHub**
 
 Welcome to **GitHub Tracker**, a web app designed to help you monitor and analyze the activity of GitHub users. Whether you’re a developer, a project manager, or just curious, this tool simplifies tracking contributions and activity across repositories! 🚀👩‍💻
-
-**Love it?** 👉 _Don't forget to star this repo!_ 🌟
-
 ---
 
-![github-tracker](https://github.com/user-attachments/assets/github-tracker-screenshot.png)
+![github-tracker](/crl.png)
 
 ## 📊 What is GitHub Tracker?
 
@@ -48,17 +45,23 @@ To set up and run **GitHub Tracker** locally, follow these steps:
 ### 🗂️ Setting Up GitHub Tracker Repository
 
 1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/github-tracker.git
-   ```
+```bash
+$ git clone https://github.com/yourusername/github-tracker.git
+```
 
 2. Navigate to the project directory:
-   ```bash
-    cd github-tracker
-   ```
+```bash
+$ cd github-tracker
+```
 
 3. Run the app
-   ```bash
-    $ npm i
-    $ node app.js
-   ```
+```bash
+$ npm i
+$ node app.js
+```
+
+### 🌟 Coming Soon
+- Add a web page to enter github username and fetch details of that user
+- Add options to track PRs, Issues and new repos
+- Add options to track stars, followers, following
+- Add options to track engagements (e.g. comments, closing, opening and merging PRs)
