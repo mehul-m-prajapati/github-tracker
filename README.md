@@ -3,6 +3,8 @@
 **Track Activity of Users on GitHub**
 
 Welcome to **GitHub Tracker**, a web app designed to help you monitor and analyze the activity of GitHub users. Whether you’re a developer, a project manager, or just curious, this tool simplifies tracking contributions and activity across repositories! 🚀👩‍💻
+
+
 ---
 
 ![github-tracker](/crl.png)
