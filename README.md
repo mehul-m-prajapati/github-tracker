@@ -22,11 +22,6 @@ GitHub Tracker is a platform for tracking user activity on GitHub, allowing you 
 3. **🔔 Notifications**: Get alerts on specific activities or changes in repositories.
 4. **🔍 Repository Insights**: Explore detailed statistics for any GitHub repository.
 
-#### **Coming Soon**:
-
-5. **👥 Team Monitoring**: Track activities of your team members in one place.
-6. **📊 Custom Dashboards**: Create personalized dashboards to visualize the data that matters to you.
-
 ---
 
 ## 🛠️ Tech Stack
@@ -67,3 +62,5 @@ $ node app.js
 - Add options to track PRs, Issues and new repos
 - Add options to track stars, followers, following
 - Add options to track engagements (e.g. comments, closing, opening and merging PRs)
+- **👥 Team Monitoring**: Track activities of your team members in one place.
+- **📊 Custom Dashboards**: Create personalized dashboards to visualize the data that matters to you.
