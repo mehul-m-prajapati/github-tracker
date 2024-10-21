@@ -64,3 +64,7 @@ $ node app.js
 - Add options to track engagements (e.g. comments, closing, opening and merging PRs)
 - **👥 Team Monitoring**: Track activities of your team members in one place.
 - **📊 Custom Dashboards**: Create personalized dashboards to visualize the data that matters to you.
+
+
+### References
+- [github-scraper](https://github.com/nelsonic/github-scraper)
