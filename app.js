@@ -1,9 +1,19 @@
-var gs = require('github-scraper');
+const express = require('express');
+const bodyParser = require('body-parser');
+const gs = require('github-scraper');
 
-var username = '/mehul-m-prajapati';
+const app = express();
+const PORT = 3000;
 
-// Function to get followers data
-async function getFollowersData(url) {
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
+
+/**
+ * Added getGithubData() to fetch data from github api 
+ *
+*/
+async function getGithubData(url) {
     return new Promise((resolve, reject) => {
         gs(url, function(err, data) {
             if (err) {
@@ -15,24 +25,26 @@ async function getFollowersData(url) {
     });
 }
 
-async function main() {
-    // Initial username and URL
-    var cleanedUsername = username.split('/').join('');
-    var url = `${cleanedUsername}/followers`; // Construct followers URL
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
 
-    // First API call
+app.post('/fetch', async (req, res) => {
+    const username = req.body.username;
+    const url = `/${username}`;
+
     try {
-        let data = await getFollowersData(username);
-        console.log(data); // Process the initial data
-
-        // Second API call
-        //let followersData = await getFollowersData(url);
-        //console.log(followersData); // Process the followers data
-
+        const data = await getGithubData(url);
+        res.json(data);
     } catch (error) {
-        console.error('Error fetching data:', error);
+        res.status(500).send('Error fetching data: ' + error.message);
     }
-}
+});
 
-// Start the execution
-main();
+/**
+ * By default user will be redirected to home page
+ *
+ */
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

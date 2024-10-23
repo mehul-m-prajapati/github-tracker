@@ -1,0 +1,54 @@
+body {
+    background-color: #f6f8fa;
+    color: #24292e;
+}
+h1 {
+    color: #16d633;
+}
+
+.main-heading {
+    text-transform: uppercase;
+}
+.main-container{
+    background: #333333;
+    padding: 5rem;
+}
+
+.input-field-section {
+    display: flex;
+    justify-content: center;
+}
+
+#username{
+    max-width: 20rem;
+}
+.form-control {
+    border: 1px solid #e1e4e8;
+    background-color: #fff;
+}
+.btn-primary {
+    background-color: #16d633;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #029919;
+}
+#github-user-data {
+    background-color: #cac9c9;
+    border: 1px solid #e1e4e8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: auto;
+    max-height: 300px;
+}
+
+#repo-list{
+    background: #111;
+
+}
+
+.repo-link{
+    color: #16d633;
+    text-decoration: none;
+}

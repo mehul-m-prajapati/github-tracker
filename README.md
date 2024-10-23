@@ -65,6 +65,12 @@ $ node app.js
 - **👥 Team Monitoring**: Track activities of your team members in one place.
 - **📊 Custom Dashboards**: Create personalized dashboards to visualize the data that matters to you.
 
+### UPDATE 24-10-2024 | Aqib Ali Mughal
+- Added a web page to fetch github user details by getting username as an input from user.
+- Additionally added anchor tag to show user all time repositories
+- Added packages 'Body Parser' & 'express' to handle http requests.
+
+
 
 ### References
 - [github-scraper](https://github.com/nelsonic/github-scraper)
