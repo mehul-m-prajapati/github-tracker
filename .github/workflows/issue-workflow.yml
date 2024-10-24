@@ -1,0 +1,28 @@
+name: Issue Workflow
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Label new issue
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        labels: "bug, help wanted"
+
+  comment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Add welcome comment
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          Thank you for raising this issue! 💡  
+          Our team will address it soon. Stay tuned! 🔧

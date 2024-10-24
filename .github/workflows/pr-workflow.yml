@@ -1,0 +1,31 @@
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Check if server starts
+      run: npm start &
+    - name: Wait for server to respond
+      run: sleep 5  # Give server some time to start
+
+    - name: Test server is running
+      run: curl -f http://localhost:3000 || exit 1  # Fails if server is not running
